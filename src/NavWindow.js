@@ -6,7 +6,7 @@ import { MapComponent } from "./MapComponent";
 
 
 export const NavWindow = () => {
-    let pStyle={height: "500px", background: "green"};
+    let pStyle={height: "90%", background: "green"};
     return (
     <Window width="67%" title="Streets98">
         <Stack direction="column" alignItems="stretch" justifyContent="flex-end" spacing={0}>
