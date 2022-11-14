@@ -4,7 +4,7 @@ import { TitleBar } from "./TitleBar";
 
 const Div = styled.div`
     width:100%;
-    margin: 1rem;
+    margin: .5rem;
 `
 
 const WindowDiv = styled.div`

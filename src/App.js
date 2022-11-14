@@ -3,14 +3,15 @@ import { Grid } from '@mui/material';
 import { Stack } from '@mui/system';
 import { Container } from '@mui/system';
 import { Window } from './Window';
-import { NavWindow } from './NavWindow';
-import { VisualizerWindow } from './VisualizerWindow';
+import { MapComponent } from "./MapComponent";
 import styled from "styled-components";
 
 const MainScreen = styled.div`
-    width:100vw;
-    height:100vh;
+    width:50vw;
+    height:50vh;
     background-color: #008080;
+    transform-origin: left top;
+    transform: scale(2);
     /*padding: 10px;*/
 `
 
@@ -31,11 +32,11 @@ const WindowArea = styled.div`
     flex-shrink: 0;
   `
 
-const Window1 = styled(Window)`
+const VisualizerWindow = styled(Window)`
   flex-basis:33%;
 `
 
-const Window2 = styled(Window)`
+const NavWindow = styled(Window)`
   flex-basis:67%;  
 `
 
@@ -45,11 +46,12 @@ function App() {
     <MainScreen>
       <TaskBarStack>
         <WindowArea>
-          <Window1 title="visual"/>
-          <Window2 title="nav"/>
+          <VisualizerWindow title="Visualizer"/>
+          <NavWindow title="Streets98">
+          </NavWindow>
         </WindowArea>
         <StartBarArea>
-          hiiiiii
+            
         </StartBarArea>
       </TaskBarStack>
     </MainScreen>
