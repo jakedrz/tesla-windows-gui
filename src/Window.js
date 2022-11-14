@@ -1,30 +1,25 @@
 import React from "react";
-import { Container } from "@mui/system";
+import styled from "styled-components";
 import { TitleBar } from "./TitleBar";
 
+const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+`
+const WindowBody = styled.div`
+    flex-grow:1;
+    height:100%;
+`
 
-export const Window = ({ title, controls, children, width="300px" }) => {
-    let style = {
-        width: width
-    }
+export const Window = ({ title, controls, children, className}) => {
     return (
-        <div className="window" style={style}>
+        <Div className={`window ${className}`}>
             <TitleBar controls={controls}>{title}</TitleBar>
-            <WindowBody>
+            <WindowBody className="window-body">
                 {children}
             </WindowBody>
-        </div>
-    )
-}
-
-const WindowBody = ({children}) => {
-    let divStyle = {
-        height: '100%',
-        overflow: 'hidden'
-    }
-    return (
-        <div style={divStyle} className="window-body">
-            {children}
-        </div>
+        </Div>
     )
 }
