@@ -48,6 +48,7 @@ function App() {
         <WindowArea>
           <VisualizerWindow title="Visualizer"/>
           <NavWindow title="Streets98">
+            <MapComponent/>
           </NavWindow>
         </WindowArea>
         <StartBarArea>
